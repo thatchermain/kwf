@@ -1,0 +1,84 @@
+@import "./variables";
+
+.news {
+  width: 100vw;
+  height: 80vh;
+  padding-top: 130px;
+
+  @media screen and (max-width: 990px) {
+    padding-top: 60px;
+    height: 70vh;
+  }
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  @media screen and (max-width: 990px) {
+    display: block;
+  }
+}
+.text {
+  min-width: 50%;
+  max-width: 990px;
+}
+.h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.h1 {
+  font-family: $secondaryFont;
+  font-size: 3.25rem;
+  color: $primaryYellow;
+  margin-top: 0;
+  @media screen and (max-width: 990px) {
+    font-size: 2.25rem;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 1.75rem;
+  }
+}
+.list {
+  list-style: none;
+  line-height: 2.5;
+}
+.listItem {
+  position: relative;
+  font-size: 1.25rem;
+  padding: 0 2%;
+  &:before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: $primaryYellow;
+    border-radius: 10px;
+    transform: translate(-100%, 200%);
+    @media screen and (max-width: 576px) {
+      transform: translate(-150%, 150%);
+    }
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 1rem;
+    padding: 0 1%;
+  }
+}
+
+.image {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  @media screen and (max-width: 1200px) {
+    top: 40%;
+  }
+  @media screen and (max-width: 990px) {
+    position: relative;
+    width: 60%;
+    left: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,66 @@
+@import "./variables";
+.menu {
+  padding-top: 130px;
+  @media screen and (max-width: 990px) {
+    display: none;
+  }
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.h1 {
+  font-family: $secondaryFont;
+  font-size: 3.25rem;
+  color: $primaryYellow;
+  margin-top: 0;
+  @media screen and (max-width: 990px) {
+    font-size: 2.25rem;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 1.75rem;
+  }
+}
+.menuList {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  list-style: none;
+  color: $textLight;
+  font-size: 1.25rem;
+  cursor: pointer;
+  @media screen and (max-width: 990px) {
+    display: none;
+  }
+}
+.menuItem {
+  position: relative;
+  width: 100%;
+  background-color: $primaryYellow;
+  padding: 20px;
+  z-index: 1;
+  // @media screen and (max-width: 990px) {
+  //   width: 100vw;
+  //   margin: 0 auto;
+  //   background-color: transparent;
+  //   border-bottom: 2px solid $primaryYellow;
+  //   color: $textDark;
+  // }
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $secondaryYellow;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+  }
+}

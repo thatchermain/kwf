@@ -1,0 +1,116 @@
+@import "./variables";
+.menu {
+  // margin-top: 10rem;
+  padding-top: 130px;
+
+  @media screen and (min-width: 990px) {
+    padding-top: 60px;
+    // padding: 0;
+    display: none;
+  }
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.h1 {
+  font-family: $secondaryFont;
+  color: $primaryYellow;
+  margin-top: 0;
+
+  font-size: 2.25rem;
+
+  @media screen and (max-width: 576px) {
+    font-size: 1.75rem;
+  }
+}
+
+.menuList {
+  padding: 0;
+  width: 320px;
+  list-style: none;
+  color: $textDark;
+  font-size: 1.25rem;
+  cursor: pointer;
+  width: 100vw;
+  margin: 0 auto;
+  @media screen and (max-width: 576px) {
+    font-size: 1rem;
+  }
+}
+.menuItem {
+  position: relative;
+  padding: 20px;
+  z-index: 1;
+  width: 80vw;
+  margin: 0;
+  background-color: transparent;
+  border-bottom: 2px solid $primaryYellow;
+  color: $textDark;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $secondaryYellow;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+  }
+}
+.menuContent {
+  display: block;
+  width: 80%;
+  height: auto;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.dataDescription {
+  font-size: 1.25rem;
+  padding-bottom: 2rem;
+  @media screen and (max-width: 576px) {
+    font-size: 1rem;
+  }
+}
+.dataList {
+  list-style: none;
+  line-height: 2;
+  padding-bottom: 2rem;
+}
+.dataListItem {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: bold;
+  @media screen and (max-width: 576px) {
+    font-size: 1rem;
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    background-color: $primaryYellow;
+    border-radius: 10px;
+    transform: translate(-250%, 75%);
+    @media screen and (max-width: 576px) {
+      width: 10px;
+      height: 10px;
+      transform: translate(-200%, 100%);
+    }
+  }
+}
+.hidden {
+  opacity: 0;
+  height: 0;
+  display: none;
+}

@@ -1,0 +1,43 @@
+@import "./variables";
+.partners {
+  padding-top: 130px;
+  @media screen and (max-width: 990px) {
+    padding-top: 60px;
+  }
+}
+.h1 {
+  font-family: $secondaryFont;
+  font-size: 3.25rem;
+  color: $primaryYellow;
+  margin-top: 0;
+  @media screen and (max-width: 990px) {
+    font-size: 2.25rem;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 1.75rem;
+  }
+}
+.logos {
+  margin: 10rem auto;
+  width: 80vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  @media screen and (max-width: 990px) {
+    gap: 2rem;
+    margin: 5rem auto;
+  }
+}
+.logoWrapper {
+  padding: 1rem;
+  width: 220px;
+  height: 150px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 15px rgba($primaryGreen, 0.5);
+}

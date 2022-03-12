@@ -1,0 +1,35 @@
+@import "./variables";
+.menuContent {
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 70%;
+  height: 100%;
+  cursor: pointer;
+  @media screen and (max-width: 990px) {
+    display: none;
+  }
+}
+.dataDescription {
+  font-size: 1.25rem;
+  padding-bottom: 2rem;
+}
+.dataList {
+  list-style: none;
+  line-height: 2;
+}
+.dataListItem {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: bold;
+  &:before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    background-color: $primaryYellow;
+    border-radius: 10px;
+    transform: translate(-250%, 75%);
+  }
+}
